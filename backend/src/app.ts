@@ -2,8 +2,10 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import { createServer } from "http";
 import { Server } from "socket.io";
+import dotenv from "dotenv";
+dotenv.config();
 
-const clientUrl = 'http://localhost:3000';
+const clientUrl = process.env.CLIENT_URL;
 
 const app = express();
 app.use(express.json());

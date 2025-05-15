@@ -1,6 +1,6 @@
 import { FormEvent, useEffect, useRef, useState } from 'react'
 import { io } from 'socket.io-client';
-const serverUrl = 'http://localhost:3001';
+const serverUrl = import.meta.env.VITE_SERVER_URL;
 const socket = io(serverUrl);
 
 
